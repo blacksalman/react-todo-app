@@ -43,12 +43,6 @@ export const TodoWrapper = () => {
         ));
     }
 
-    const setSearchTodo = (todoName) => {
-        console.log('todoName', todoName);
-        setSearch(todos.find(todo=>todo.task === todoName))
-    }
-    console.log('search wrapper', search);
-
     const editTask = (task , id) => {
         setTodos(todos.map(todo=>todo.id === id ? {
             ...todo, task, isEditing: !todo.isEditing
